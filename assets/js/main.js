@@ -60,8 +60,16 @@ $(function (){
             };
             
         };
-
-        alert("Hai ricordato " + listaFinale.length + " numeri e sono: " + listaFinale);
+        //Modificato il messaggio a seconda del risultato del giocatore
+        if(listaFinale.length == 5){
+            alert("Complimenti hai ricordato tutti i numeri che sono: " + listaFinale)
+        } else if(listaFinale.length == 0){
+            alert("Non sei riuscito a ricordare nemmeno un numero")
+        } else if(listaFinale.length == 1){
+            alert("Hai ricordato un solo numero ed è il numero " + listaFinale);
+        } else{
+            alert("Hai ricordato " + listaFinale.length + " numeri e sono: " + listaFinale);
+        };
     };
 
 });
