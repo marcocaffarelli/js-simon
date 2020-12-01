@@ -21,6 +21,12 @@ $(function (){
         //terminato il conteggio chiede all' utente di inserire per 5 volte un numero
         for (var index = 0; index <= 4; index++) {
             var numeroUtente = Number(prompt('Inserisci un numero che ricordi'));
+            //ciclo while che evita che l'utente inserisca un numero già inserito
+            while(listaNumeriUtente.includes(numeroUtente)== true){
+                alert("hai già inserito quel numero...")
+                numeroUtente = Number(prompt('Inserisci un numero che ricordi'));
+                listaNumeriUtente.includes(numeroUtente)== false
+            }
             //inseriamo il numero scritto all'interno di un array
             listaNumeriUtente.push(numeroUtente);
         };
